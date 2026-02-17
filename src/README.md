@@ -6,8 +6,7 @@ This directory contains the implementation of the financial pricing engine. The 
 
 | File | Description | Key Classes |
 | :--- | :--- | :--- |
-| **`asset_class.py`** | Defines financial instruments. Contains contract specifications (Strike, Expiry, Barrier levels). | `EuropeanOption`, `AsianOption`, `BarrierOption`, `Asset` (Abstract) |
-| **`pricing_method.py`** | *Implicit/Abstract.* Defines the interface for all pricing algorithms. | `PricingMethod` (Abstract Base Class) |
+| **`asset_class.py`** | Defines financial instruments. Contains contract specifications (Strike, Expiry, Barrier levels). | `EuropeanOption`, `AsianOption`, `BarrierOption`, `Asset` (Abstract), `PricingMethod` (Abstract) |
 | **`black_scholes.py`** | Analytical closed-form solutions for standard European options. | `BlackScholesPricer` |
 | **`monte_carlo.py`** | Numerical integration using Geometric Brownian Motion (GBM). Vectorized for performance. | `EuropeanOptionMCPricer`, `AsianOptionMCPricer`, `BarrierOptionMCPricer` |
 | **`market_data.py`** | Handles interest rate term structures and discounting. | `YieldCurve`, `YieldCurveMethod` (Linear, Nelson-Siegel, Svensson) |
